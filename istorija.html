@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Countdown</title>
+    
+    <script src="countDown.min.js"></script>
+    <link href="style.css" media="all" rel="stylesheet" />
+    <style>
+        body {
+            background:ffff;
+        }
+       
+    </style>
+</head>
+<body>
+<center>
+    <h1>ВРЕМЯ ДО ИСТОРИИИ !</h1>
+    <div class="container"></div>
+    <script>
+        var cd = new Countdown({
+            cont: document.querySelector('.container'),
+            date: 1624262400000,
+            outputTranslation: {
+                week: 'Недель',
+                day: 'Дней',
+                hour: 'Часов',
+                minute: 'Минут',
+                second: 'Секунд',
+            },
+            endCallback: null,
+            outputFormat: 'week|day|hour|minute|second',
+        });
+        cd.start();
+    </script>
+    </center>
+</body>
+</html>
